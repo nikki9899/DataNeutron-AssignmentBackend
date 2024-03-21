@@ -13,9 +13,7 @@ mongoose.connect(process.env.MONGODB_URI).then (()=>console.log("mongodb connect
 
 
 
-app.use(cors({
-    origin: 'http://localhost:3000' 
-  }));
+app.use(cors());
   
 app.use(bodyParser.json());
 app.use("/",todoRouter)
